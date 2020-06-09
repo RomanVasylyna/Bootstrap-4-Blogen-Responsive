@@ -72,17 +72,17 @@
 <div class="container mt-4">
   <div class="row mb-5">
     <div class="col-lg-3 mb-2">
-    <a class="btn btn-primary btn-block" href="index.html">
+    <a class="btn btn-primary btn-block" href="index.html" data-toggle="modal" data-target="#addPost">
       <i class="fas fa-plus pr-1"></i>Add Post
     </a>
     </div>
     <div class="col-lg-3 mb-2">
-    <a class="btn btn-success btn-block" href="index.html">
+    <a class="btn btn-success btn-block" href="index.html" data-toggle="modal" data-target="#addCategory">
       <i class="fas fa-plus pr-1"></i>Add Category
     </a>
     </div>
     <div class="col-lg-3 mb-2">
-    <a class="btn btn-warning btn-block" href="index.html">
+    <a class="btn btn-warning btn-block" href="index.html" data-toggle="modal" data-target="#addUser">
       <i class="fas fa-plus pr-1"></i>Add User
     </a>
     </div>
@@ -220,7 +220,129 @@
 
 
 <!--Modals!-->
+<!--1) Add Post Modal!-->
+<div class="modal fade" id="addPost">
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
 
+    <div class="modal-header bg-primary text-white">
+      <h5>Add Post</h5>
+      <a href="" class="text-white h5 close" data-dismiss="modal">&times;</a>
+    </div>
+
+    <!--Form!-->
+    <div class="modal-body">
+      <form>
+        <div class="form-group mb-2">
+          <label for="title">Title</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="select">Category</label>
+          <select name="" id="selectCategory" class="form-control">
+            <option>Web Development</option>
+            <option>Tech Gadgets</option>
+            <option>Business</option>
+            <option>Health & Wellness</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+         <label for="image">Upload Image</label>
+         <div class="custom-file">
+           <input type="file" class="custom-file-input">
+           <label for="image" class="custom-file-label">Choose File</label>
+         </div>
+         <small class="form-text text-muted">Max size 3mb</small>
+       </div>
+
+       <div class="form-group">
+         <label for="body">Body</label>
+         <textarea name="editor1" rows="8" cols="80"></textarea>
+       </div>
+      </form>
+    </div>
+
+   <!--Save Changes!-->
+  <div class="modal-footer">
+   <button class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+  </div>
+  </div>
+</div>
+</div>
+
+
+<!--2)Add Category!-->
+<div class="modal fade" id="addCategory">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    <!--Modal Header!-->
+    <div class="modal-header bg-success text-white">
+      <h4>Add Category</h4>
+      <a href="" class="text-white h5 close" data-dismiss="modal">&times;</a>
+    </div>
+
+    <!--Form!-->
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control">
+        </div>
+      </form>
+    </div>
+
+    <!--Modal Footer!-->
+    <div class="modal-footer">
+      <button class="btn btn-success" data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </div>
+  </div>
+</div>
+
+
+<!--3)Add User!-->
+<div class="modal fade" id="addUser">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+  <!--Header!-->
+  <div class="modal-header bg-warning text-white">
+  <h5>Add User</h5>
+  <a href="" class="h5 close text-white" data-dismiss="modal">&times;</a>
+  </div>
+
+  <!--Form!-->
+  <div class="modal-body">
+    <form action="">
+      <div class="form-group mb-3">
+        <label for="name">Name</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group mb-3">
+        <label for="name">Email</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group mb-3">
+        <label for="name">Password</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group mb-3">
+        <label for="name">Confirm Password</label>
+        <input type="text" class="form-control">
+      </div>
+    </form>
+  </div>
+
+  <!--Footer!-->
+  <div class="modal-footer">
+    <button class="btn btn-warning" data-dismiss="modal">Save Changes</button>
+  </div>
+
+</div>
+</div>
+</div>
 
 
 
