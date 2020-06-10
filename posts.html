@@ -10,7 +10,7 @@
     crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
   <link rel="stylesheet" href="styles.css">
-  <title>User's Profile</title>
+  <title>Posts</title>
 </head>
 <body>
 
@@ -62,7 +62,7 @@
   <div class="container-fluid bg-primary text-white mt-5">
     <div class="row">
       <div class="col p-2">
-        <h1 class="pl-5"><i class="fas fa-cog pr-2"></i>Settings</h1>
+        <h1 class="pl-5"><i class="fas fa-pencil-alt pr-2"></i>Posts</h1>
       </div>
     </div>
   </div>
@@ -70,55 +70,120 @@
   <!--Buttons Section!-->
   <div class="container mt-4">
     <div class="row mb-5">
-      <div class="col-lg-3 mb-2">
+
+      <!--Back to Dashboard Button!-->
+      <div class="col-lg-3 col-mg-6 mb-2 m">
       <a class="btn btn-light btn-block" href="index.html">
         <i class="fas fa-arrow-left pr-1"></i>Back to Dashboard
       </a>
       </div>
-      <div class="col-lg-3 mb-2">
-      <a class="btn btn-success btn-block" href="index.html">
-        <i class="fas fa-check pr-1"></i>Save Changes
-      </a>
+
+       <!--Search!-->
+      <div class="col-lg-6 col-mg-6 mb-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Posts...">
+          <div class="input-group-append">
+           <button class="btn btn-primary">Search</button>
+           </div>
+        </div>
       </div>
+
     </div>
   </div>
 
-  <!--Settings Card!-->
+  <!--Edit Profile Card!-->
   <div class="container">
     <div class="row">
-      <div class="col">
-        <div class="card mb-5">
+      <div class="col-lg mb-5">
+        <div class="card">
           <div class="card-header">
-            <h4>Edit Settings</h4>
+            <h4>Latest Posts</h4>
           </div>
-          <div class="card-body">
-            <form>
-              <legend>Allow User Registration</legend>
-              <div class="form-check">
-                <input type="radio" class="form-check-input" checked>
-                <label for="" class="form-check-label">Yes</label>
-              </div>
-              <div class="form-check mb-2">
-                <input type="radio" class="form-check-input">
-                <label for="" class="form-check-label">No</label>
-              </div>
 
-              <legend>Home Page Format</legend>
-              <div class="form-check">
-                <input type="radio" class="form-check-input" checked>
-                <label for="" class="form-check-label">Blog</label>
-              </div>
-              <div class="form-check">
-                <input type="radio" class="form-check-input">
-                <label for="" class="form-check-label">Homepage</label>
-              </div>
-            </form>
-          </div>
+
+            <!--Table with Posts!-->
+          <table class="table table-striped">
+            <thead class="bg-dark text-white">
+              <tr>
+                <td>#</td>
+                <td>Title</td>
+                <td>Category</td>
+                <td>Date</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Post One</td>
+                <td>Web Development</td>
+                <td id="today"></td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right pr-1"></i>Details</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Post Two</td>
+                <td>Tech Gadgets</td>
+                <td id="today"></td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right pr-1"></i>Details</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Post Three</td>
+                <td>Web Development</td>
+                <td id="today"></td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right pr-1"></i>Details</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>Post Four</td>
+                <td>Business</td>
+                <td id="today"></td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right pr-1"></i>Details</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Post Five</td>
+                <td>Web Development</td>
+                <td id="today"></td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right pr-1"></i>Details</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>6</td>
+                <td>Post Six</td>
+                <td>Health & Wellness</td>
+                <td id="today"></td>
+                <td><a href="details.html" class="btn btn-secondary"><i class="fas fa-angle-double-right pr-1"></i>Details</a>
+                </td>
+              </tr>
+
+
+            </tbody>
+          </table>
+
+          <ul class="pagination ml-4">
+             <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+
+
         </div>
       </div>
     </div>
   </div>
-
 
   <!--Footer!-->
   <div class="container-fluid">

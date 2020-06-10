@@ -27,35 +27,34 @@
  <div class="collapse navbar-collapse" id="menu">
 <div class="navbar-nav mr-auto">
   <li class="nav-item">
-    <a href="#" class="text-white nav-link active">Dashboard</a>
+    <a href="index.html" class="text-white nav-link active">Dashboard</a>
   </li>
   <li class="nav-item">
-    <a href="#" class="text-white nav-link">Posts</a>
+    <a href="posts.html" class="text-white nav-link">Posts</a>
   </li>
   <li class="nav-item">
-    <a href="#" class="text-white nav-link">Categories</a>
+    <a href="categories.html" class="text-white nav-link">Categories</a>
   </li>
   <li class="nav-item">
-    <a href="#" class="text-white nav-link">Users</a>
+    <a href="users.html" class="text-white nav-link">Users</a>
   </li>
+
+    <!--Dropdown Section!-->
+    <div class="dropdown">
+    <a href="" class="dropdown-toggle nav-link text-white mr-2" data-toggle="dropdown"><i class="fas fa-user pr-1"></i>Welcome Brad</a>
+    <div class="dropdown-menu">
+    <a href="profile.html" class="dropdown-item"><i class="fas fa-user-circle pr-1"></i>Profile</a>
+    <a href="settings.html" class="dropdown-item"><i class="fas fa-cog pr-1"></i>Settings</a>
+    </div>
+    </div>
+    <!--Logout!-->
+    <a href="login.html" class="nav-link text-white">
+      <i class="fas fa-user-times"></i>
+      Logout
+    </a>
 </div>
 </div>
 
-<!--Dropdown Section!-->
-<div class="dropdown">
-<a href="" class="dropdown-toggle nav-link text-white mr-2" data-toggle="dropdown"><i class="fas fa-user pr-1"></i>Welcome Brad</a>
-<div class="dropdown-menu">
-<a href="profile.html" class="dropdown-item"><i class="fas fa-user-circle pr-1"></i>Profile</a>
-<a href="settings.html" class="dropdown-item"><i class="fas fa-cog pr-1"></i>Settings</a>
-</div>
-</div>
-
-
-<!--Logout!-->
-<a href="login.html" class="nav-link text-white">
-  <i class="fas fa-user-times"></i>
-  Logout
-</a>
 </div>
 </navbar>
 
@@ -116,7 +115,7 @@
                 <td>Post One</td>
                   <td>Web Development</td>
                     <td id="today"></td>
-                    <td><button class="btn btn-secondary" id="first"><i class="fas fa-angle-double-right pr-1"></i>Details</button></td>
+                    <td><a href="postOne.html" class="btn btn-secondary text-white" id="first"><i class="fas fa-angle-double-right pr-1"></i>Details</a></td>
                 </tr>
 
                 <!--Second Post!-->
@@ -179,7 +178,7 @@
           <h1 class="display-4">
             <i class="fas fa-pencil-alt pr-1"></i>6
           </h1>
-          <button class="btn btn-outline-light btn-sm">View</button>
+          <a class="btn btn-outline-light btn-sm" href="posts.html">View</a>
         </div>
       </div>
 
@@ -190,7 +189,7 @@
           <h1 class="display-4">
             <i class="fas fa-folder pr-1"></i>4
           </h1>
-          <button class="btn btn-outline-light btn-sm">View</button>
+          <a class="btn btn-outline-light btn-sm" href="categories.html">View</a>
         </div>
       </div>
 
@@ -201,7 +200,7 @@
           <h1 class="display-4">
             <i class="fas fa-users pr-1"></i>4
           </h1>
-          <button class="btn btn-outline-light btn-sm">View</button>
+          <a class="btn btn-outline-light btn-sm" href="users.html">View</a>
         </div>
       </div>
 
@@ -395,6 +394,7 @@
               window.location.hash = hash;
             });
           }
-        });</script>
+        });
+      </script>
 </body>
 </html>

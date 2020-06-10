@@ -10,7 +10,7 @@
     crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
   <link rel="stylesheet" href="styles.css">
-  <title>User's Profile</title>
+  <title>Post One</title>
 </head>
 <body>
 
@@ -62,7 +62,7 @@
   <div class="container-fluid bg-primary text-white mt-5">
     <div class="row">
       <div class="col p-2">
-        <h1 class="pl-5"><i class="fas fa-cog pr-2"></i>Settings</h1>
+        <h1 class="pl-5">Post One</h1>
       </div>
     </div>
   </div>
@@ -77,48 +77,66 @@
       </div>
       <div class="col-lg-3 mb-2">
       <a class="btn btn-success btn-block" href="index.html">
-        <i class="fas fa-check pr-1"></i>Save Changes
+        <i class="fas fa-check pr-1"></i></i>Save Changes
+      </a>
+      </div>
+      <div class="col-lg-3">
+      <a class="btn btn-danger btn-block" href="index.html">
+        <i class="fas fa-trash pr-1"></i></i>Delete Post
       </a>
       </div>
     </div>
   </div>
 
-  <!--Settings Card!-->
+  <!--Edit Profile Card!-->
   <div class="container">
     <div class="row">
-      <div class="col">
-        <div class="card mb-5">
+      <div class="col-lg mb-5">
+        <div class="card">
           <div class="card-header">
-            <h4>Edit Settings</h4>
+            <h4>Edit Post</h4>
           </div>
           <div class="card-body">
-            <form>
-              <legend>Allow User Registration</legend>
-              <div class="form-check">
-                <input type="radio" class="form-check-input" checked>
-                <label for="" class="form-check-label">Yes</label>
-              </div>
-              <div class="form-check mb-2">
-                <input type="radio" class="form-check-input">
-                <label for="" class="form-check-label">No</label>
+
+            <!--Form!-->
+            <form action="">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control mb-3" placeholder="Post One">
               </div>
 
-              <legend>Home Page Format</legend>
-              <div class="form-check">
-                <input type="radio" class="form-check-input" checked>
-                <label for="" class="form-check-label">Blog</label>
-              </div>
-              <div class="form-check">
-                <input type="radio" class="form-check-input">
-                <label for="" class="form-check-label">Homepage</label>
-              </div>
+               <div class="form-group">
+               <label for="category">Category</label>
+               <select name="" id="" class="form-control">
+               <option>Web Development</option>
+               <option>Teach Gadgets</option>
+               <option>Business</option>
+               <option>Health & Wellness</option>
+               </select>
+               </div>
+
+               <div class="form-group">
+                 <label for="">Upload Image</label>
+                 <div class="custom-file">
+                  <input type="file" class="custom-file-input">
+                  <label for="file" class="custom-file-label">Choose File</label>
+                  <small class="text-muted">Max Size 3Mb</small>
+                </div>
+               </div>
+
+               <div class="form-group">
+                 <label for="bio">Body</label>
+                 <textarea name="editor1" id="" cols="30" rows="8" class="form-control">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?
+                 </textarea>
+               </div>
+
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 
   <!--Footer!-->
   <div class="container-fluid">
