@@ -41,7 +41,7 @@
 
       <!--Dropdown Section!-->
       <div class="dropdown">
-      <a href="" class="dropdown-toggle nav-link text-white mr-2" data-toggle="dropdown"><i class="fas fa-user pr-1"></i>Welcome Brad</a>
+      <a href="" class="dropdown-toggle nav-link text-white mr-2" data-toggle="dropdown"><i class="fas fa-user pr-1"></i>Welcome Roman</a>
       <div class="dropdown-menu">
       <a href="profile.html" class="dropdown-item"><i class="fas fa-user-circle pr-1"></i>Profile</a>
       <a href="settings.html" class="dropdown-item"><i class="fas fa-cog pr-1"></i>Settings</a>
@@ -81,7 +81,7 @@
       </a>
       </div>
       <div class="col-lg-3">
-      <a class="btn btn-danger btn-block" href="index.html">
+      <a class="btn btn-danger btn-block" href="login.html">
         <i class="fas fa-trash pr-1"></i></i>Delete Account
       </a>
       </div>
@@ -113,9 +113,9 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumq
 
       <div class="col-lg-3">
         <h3>Your Avatar</h3>
-        <img src="img/avatar.png" alt="" class="img-fluid">
-        <button class="btn btn-primary btn-block mt-3">Edit Image</button>
-        <button class="btn btn-danger btn-block mt-2 mb-5">Delete Image</button>
+        <img src="img/roman.jpg" alt="" class="img-fluid" id="avatar">
+        <button class="btn btn-primary btn-block mt-3" id="editPhoto" data-toggle="modal" data-target="#avatarChangeModal">Edit Image</button>
+        <button class="btn btn-danger btn-block mt-2 mb-5" id="deletePhoto">Delete Image</button>
       </div>
     </div>
   </div>
@@ -128,6 +128,34 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumq
      </div>
    </div>
   </div>
+
+  <!--Upload New Avatar Modal!-->
+  <div class="modal fade" id="avatarChangeModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header bg-primary text-white">
+         <h4>Upload New Image</h4>
+           <a href="" class="h5 close text-white" data-dismiss="modal">&times;</a>
+        </div>
+
+        <div class="modal-body">
+          <div class="form-group">
+           <label for="image">Upload Image</label>
+           <div class="custom-file">
+             <input type="file" class="custom-file-input" id="upload">
+             <label for="image" class="custom-file-label">Choose File</label>
+           </div>
+           <small class="form-text text-muted">Max size 3mb</small>
+           <button class="btn btn-primary mt-2 btn-block" data-dismiss="modal" id="okBtn">OK</button>
+         </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
 
   <script src="javascript.js"></script>
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
