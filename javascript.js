@@ -1,3 +1,28 @@
+//Getting General Elements
+let edit = document.querySelector('#editPhoto');
+let del = document.querySelector('#deletePhoto');
+let avatar = document.querySelector('#avatar');
+let upload = document.querySelector('#upload');
+let okBtn = document.querySelector('#okBtn');
+let source;
+
+//edit.addEventListener('click', editPhoto);
+del.addEventListener('click', deletePhoto);
+upload.addEventListener('click', uploadPhoto);
+okBtn.addEventListener('click', updatePhoto);
+
+function deletePhoto() {
+avatar.src = 'img/avatar.png';
+}
+
+function uploadPhoto() {
+  source = URL.createObjectURL(event.target.files[0]);
+}
+
+function updatePhoto() {
+  avatar.src = source;
+}
+
 
 //Getting current year for footer
 function getCurrentYear() {
