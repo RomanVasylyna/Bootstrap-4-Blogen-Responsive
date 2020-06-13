@@ -5,14 +5,18 @@ let avatar = document.querySelector('#avatar');
 let upload = document.querySelector('#upload');
 let okBtn = document.querySelector('#okBtn');
 let source;
+let passwordBtn = document.querySelector('#passwordBtn');
 
 //edit.addEventListener('click', editPhoto);
-del.addEventListener('click', deletePhoto);
-upload.addEventListener('click', uploadPhoto);
-okBtn.addEventListener('click', updatePhoto);
+//del.addEventListener('click', deletePhoto);
+//upload.addEventListener('click', uploadPhoto);
+//okBtn.addEventListener('click', updatePhoto);
+passwordBtn.addEventListener('click',checkPassword);
+
 
 function deletePhoto() {
 avatar.src = 'img/avatar.png';
+source = '';
 }
 
 function uploadPhoto() {
@@ -20,7 +24,12 @@ function uploadPhoto() {
 }
 
 function updatePhoto() {
-  avatar.src = source;
+  if(source != null && source !== undefined) {
+    avatar.src = source;
+  } else {
+    avatar.src = 'img/avatar.png';
+  }
+
 }
 
 
@@ -52,6 +61,21 @@ let today = document.querySelectorAll('#today');
 let date = new Date();
 for(let i = 0; i < today.length; i++) {
   today[i].innerHTML = `${months[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}`;
+}
+}
+
+function checkPassword() {
+let password = 'peppa_Pig834';
+let currentPassword = document.querySelector('#currentPassword');
+let text = document.querySelector('#passwordChangeSuccess');
+let successAlert = document.createElement('div');
+let container = document.querySelector('#mainContainer');
+successAlert.classList.add('alert','alert-success');
+successAlert.innerHTML = 'Password Changed Successfully!';
+if(currentPassword.value == password) {
+text.innerHTML = '';
+text.appendChild(successAlert);
+container.classList.add('mb-5');
 }
 }
 
